@@ -16,7 +16,7 @@ public class JwtUtilTest {
     public void testGenerateToken() {
         // Given: 유효한 사용자 이름
         String username = "20210815";
-
+        료
         // When: JWT 토큰을 생성
         String token = jwtUtil.createJwt("accessToken", username, 86400000L);
 
