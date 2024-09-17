@@ -17,7 +17,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/signup")
-    public User userSignUp(@RequestBody UserRequestDto userRequestDto) {
+    public User userSignUp(@RequestBody UserRequestDto userRequestDto) throws Exception {
         return userService.signUp(userRequestDto);
     }
 }
