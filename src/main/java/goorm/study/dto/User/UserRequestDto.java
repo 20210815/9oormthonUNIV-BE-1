@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class UserRequestDto {
-    private String id; //학번
-    private String passwd; //비밀번호
+    private String userId; //학번
+    private String password; //비밀번호
     private String username; //이름
     private String userType; //학생, 교수, 관리자
 }

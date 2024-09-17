@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: study
+
+  # JPA 설정
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  # JWT secret 키
+  jwt:
+    secret: EyKv4LJ65R9ZGzUh8KAvYgUHnCBfE3tNp7xElSCiXYXrM0QaPjdB2FVim1o6swTO

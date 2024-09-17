@@ -2,10 +2,7 @@ package goorm.study.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
@@ -19,7 +16,7 @@ public class User {
     @Column(name = "user_id")
     private String userId; //학번
 
-    private String passwd; //비밀번호
+    private String password; //비밀번호
 
     private String username; //이름
 

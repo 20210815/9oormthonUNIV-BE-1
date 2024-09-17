@@ -20,11 +20,11 @@ public class UserService {
     public User signUp(UserRequestDto userRequestDto) throws Exception{
         // type에 있는지 확인 필요
         // 동일한 아이디 회원가입 불가 처리
-        if (userRepository.existsById(userRequestDto.getId())) {
+        if (userRepository.existsById(userRequestDto.getUserId())) {
             throw new UserAlreadyExistsException("이미 존재하는 회원입니다.");
         }
         // 비밀번호 암호화
-        User newUser = new User(userRequestDto.getId(),bCryptPasswordEncoder.encode(userRequestDto.getPasswd()), userRequestDto.getUsername(), UserType.valueOf(userRequestDto.getUserType()));
+        User newUser = new User(userRequestDto.getUserId(),bCryptPasswordEncoder.encode(userRequestDto.getPassword()), userRequestDto.getUsername(), UserType.valueOf(userRequestDto.getUserType()));
         userRepository.save(newUser);
         return newUser;
     }
