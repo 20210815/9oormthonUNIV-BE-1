@@ -1,5 +1,6 @@
 package goorm.study.JWT;
 
+import goorm.code.ErrorCode;
 import goorm.study.entity.User;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
@@ -34,14 +35,14 @@ public class JwtFilter extends OncePerRequestFilter {
         try {
             //토큰 소멸 시간 검증
             if (jwtUtil.isExpired(token)) {
-                //TokenErrorResponse.sendErrorResponse(response, ErrorCode.TOKEN_EXPIRED);
+                TokenErrorResponse.sendErrorResponse(response, ErrorCode.TOKEN_EXPIRED);
                 return; // 조건이 해당되면 메소드 종료 (필수)
             }
 
             // access token을 입력했는지 확인
             String type = jwtUtil.getType(token);
             if (!type.equals("accessToken")) {
-                //TokenErrorResponse.sendErrorResponse(response, ErrorCode.INVALID_ACCESS_TOKEN);
+                TokenErrorResponse.sendErrorResponse(response, ErrorCode.INVALID_ACCESS_TOKEN);
                 return; // 조건이 해당되면 메소드 종료 (필수)
             }
 

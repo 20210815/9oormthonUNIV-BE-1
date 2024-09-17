@@ -2,9 +2,12 @@ package goorm.study.JWT;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import goorm.code.ErrorCode;
+import goorm.code.ResponseCode;
+import goorm.study.dto.response.ErrorResponseDTO;
+import goorm.study.dto.response.ResponseDTO;
 import goorm.study.entity.User;
 import goorm.study.repository.UserRepository;
-import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +19,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.io.IOException;
-import java.util.Base64;
 
 @RequiredArgsConstructor
 public class LoginFilter extends UsernamePasswordAuthenticationFilter {
@@ -44,7 +46,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
             response.setHeader("accessToken", "Bearer " + accessToken);
             response.setHeader("refreshToken", "Bearer " + refreshToken);
 
-            //ResponseDTO responseDTO = new ResponseDTO<>(ResponseCode.SUCCESS_LOGIN, responseApplicant);
+            ResponseDTO<User> responseDTO = new ResponseDTO<>(ResponseCode.SUCCESS_LOGIN, loginUser);
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
@@ -74,7 +76,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
         response.setStatus(401);
 
-        //ErrorResponseDTO responseDTO = new ErrorResponseDTO(ErrorCode.USER_NOT_FOUND);
+        ErrorResponseDTO responseDTO = new ErrorResponseDTO(ErrorCode.USER_NOT_FOUND);
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         ObjectMapper objectMapper = new ObjectMapper();
