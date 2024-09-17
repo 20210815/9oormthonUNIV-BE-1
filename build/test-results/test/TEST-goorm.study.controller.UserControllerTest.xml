@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="goorm.study.controller.UserControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-17T09:26:57" hostname="DESKTOP-6A9QKNO" time="0.95">
+  <properties/>
+  <testcase name="userSignUp()" classname="goorm.study.controller.UserControllerTest" time="0.95"/>
+  <system-out><![CDATA[18:26:51.114 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [goorm.study.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:26:51.335 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration goorm.study.GoormstudyApplication for test class goorm.study.controller.UserControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2024-09-17T18:26:51.918+09:00  INFO 6536 --- [goormstudy] [    Test worker] g.study.controller.UserControllerTest    : Starting UserControllerTest using Java 20.0.2 with PID 6536 (started by kyumi in C:\LEEKYUMIN\구름톤 유니브\9oormthonUNIV-BE-1)
+2024-09-17T18:26:51.920+09:00  INFO 6536 --- [goormstudy] [    Test worker] g.study.controller.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-09-17T18:26:52.931+09:00  INFO 6536 --- [goormstudy] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-17T18:26:53.015+09:00  INFO 6536 --- [goormstudy] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
+2024-09-17T18:26:53.646+09:00  INFO 6536 --- [goormstudy] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-17T18:26:53.993+09:00  INFO 6536 --- [goormstudy] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:02ef69e7-fdbe-4266-ab0d-6554cfa909ec user=SA
+2024-09-17T18:26:53.996+09:00  INFO 6536 --- [goormstudy] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-17T18:26:54.097+09:00  INFO 6536 --- [goormstudy] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-17T18:26:54.201+09:00  INFO 6536 --- [goormstudy] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-17T18:26:54.251+09:00  INFO 6536 --- [goormstudy] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-17T18:26:54.808+09:00  INFO 6536 --- [goormstudy] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-17T18:26:55.961+09:00  INFO 6536 --- [goormstudy] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-17T18:26:56.000+09:00  INFO 6536 --- [goormstudy] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17T18:26:56.712+09:00  WARN 6536 --- [goormstudy] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17T18:26:57.443+09:00  WARN 6536 --- [goormstudy] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 69b2f026-1194-4354-8279-e874bbb4870e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-17T18:26:57.482+09:00  INFO 6536 --- [goormstudy] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-17T18:26:57.741+09:00  INFO 6536 --- [goormstudy] [    Test worker] g.study.controller.UserControllerTest    : Started UserControllerTest in 6.144 seconds (process running for 8.042)
+회원가입 성공
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

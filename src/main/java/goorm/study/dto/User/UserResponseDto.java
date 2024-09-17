@@ -1,4 +1,4 @@
-package groom.study.dto.User;
+package goorm.study.dto.User;
 
 public class UserResponseDto {
 }

@@ -1,5 +1,5 @@
-package groom.study.entity;
+package goorm.study.entity;
 
 public enum UserType {
-    student, professor, admin
+    STUDENT, PROFESSOR, ADMIN
 }
