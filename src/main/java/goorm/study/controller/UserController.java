@@ -1,6 +1,7 @@
 package goorm.study.controller;
 
 import goorm.study.dto.User.UserRequestDto;
+import goorm.study.entity.User;
 import goorm.study.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +17,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/signup")
-    public String userSignUp(@RequestBody UserRequestDto userRequestDto) {
-        userService.signUp(userRequestDto);
-        return "회원가입 성공";
+    public User userSignUp(@RequestBody UserRequestDto userRequestDto) {
+        return userService.signUp(userRequestDto);
     }
 }

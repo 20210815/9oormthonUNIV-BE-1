@@ -17,7 +17,12 @@ class UserControllerTest {
 
     @Test
     void userSignUp() {
-        userService.signUp(new UserRequestDto("20210815", "1234", "이규민", "STUDENT"));
-        System.out.println("회원가입 성공");
+        UserRequestDto newUser = new UserRequestDto("20210815", "1234", "이규민", "STUDENT");
+
+        User savedUser = userService.signUp(newUser);
+
+        assertNotNull(savedUser, "null이 없어야 함");
+        assertEquals("20210815", savedUser.getUserId(), "동일한 유저 아이디 사용 불가");
+        assertSame("STUDENT", savedUser.getUserType().name(), "존재하는 타입이 없음");
     }
 }
